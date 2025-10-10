@@ -1,0 +1,39 @@
+* Make the script executable
+- Run in terminal:
+  #+begin_src bash
+  chmod +x gsync.sh
+  #+end_src
+
+* create an alias in `.bashrc` or add to PATH (optional)
+
+- Add this line near the end of `~/.bashrc`:
+  #+begin_src bash
+  alias gsync='/path/to/gsync.sh'
+  #+end_src
+
+- Reload configuration:
+  #+begin_src bash
+  source ~/.bashrc
+  #+end_src
+
+or create ~/bin/gsync dir and add it to the PATH by adding to .bashrc:
+
+#+begin_src 
+export PATH="$HOME/bin:$PATH"
+#+end_src
+
+To check:
+#+begin_src shell
+  echo $PATH
+#+end_src
+
+* emacs
+Function in init.el file to launch shell command inside emacs.  
+  #+begin_src emacs-lisp
+    (defun gsync()
+      "runs gsync (git autocommit and push) in current directory"
+      (interactive)
+      (shell-command "sh ~/repos/git-autocommit/gsync.sh")
+      )
+  #+end_src
+
