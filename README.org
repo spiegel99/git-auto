@@ -6,7 +6,7 @@
 
 * create an alias in `.bashrc` or add to PATH (optional)
 
-- Add this line near the end of `~/.shellrc`:
+- Add this line near the end of `~/.bashrc`:
   #+begin_src shell
   alias gsync='/path/to/gsync.sh'
   #+end_src
